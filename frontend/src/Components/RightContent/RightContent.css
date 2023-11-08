@@ -1,0 +1,17 @@
+.RightContent {
+    margin: 5rem 0rem;
+    border-left: 1px solid var(--text-color);
+    padding: 1rem;
+}
+
+.RightContent button {
+    width: 13rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--text-color);
+    color: white;
+    border-radius: 1rem;
+    margin: 1rem 0rem;
+    border: none;
+    cursor: pointer;
+}

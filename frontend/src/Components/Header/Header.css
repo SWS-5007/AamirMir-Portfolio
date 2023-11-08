@@ -1,0 +1,126 @@
+.Header {
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+    align-items: center;
+    height: 5rem;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    position: absolute;
+    width: 100%;
+    transition: height 0.6s;
+    z-index: 10;
+}
+
+.Header ul {
+    display: flex;
+}
+
+.active {
+    transform: scale(1.1) !important;
+}
+
+.avatar {
+    color: rgb(255, 255, 255) !important;
+    background-color: var(--text-color) !important;
+    margin: 0rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+.Header ul a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin: 0rem .5rem;
+    font-weight: bold;
+    padding: .4rem 1rem;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+
+
+.Header ul a:hover {
+    transform: scale(1.1);
+}
+
+.Header nav {
+    display: flex;
+    align-items: center;
+}
+
+.social-media-links {
+    color: var(--text-color);
+    transition: all 0.5s !important;
+}
+
+.social-media-links:hover {
+    transform: scale(1.1);
+}
+
+.burger {
+    position: absolute;
+    padding: 1rem;
+    right: 2rem;
+    display: none;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.line {
+    width: 2rem;
+    height: .3rem;
+    background-color: var(--text-color);
+    margin: .5rem 0rem;
+    border-radius: .5rem;
+}
+
+@media screen and (max-width: 650px) {
+    .Header {
+        display: none;
+
+        background-color: white;
+        height: 18rem;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        position: absolute;
+        width: 100%;
+        border-bottom: none;
+    }
+
+    nav ul {
+        display: block;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+    }
+
+
+    .burger {
+        display: block;
+    }
+
+    .social-media-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .avatar {
+        margin: 3rem auto 0rem auto;
+    }
+
+}
+
+@media screen and (min-width: 651px) {
+    .Header {
+        display: flex !important;
+    }
+}

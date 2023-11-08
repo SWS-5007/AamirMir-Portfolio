@@ -1,0 +1,91 @@
+.Dashboard {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.dashboard-content {
+   height: 100%;
+}
+.dashboard-content h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin: 6rem 0rem 1rem 0rem;
+}
+
+.add-projects form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.add-projects form input,
+#thumb {
+    font-size: 1rem;
+    margin: .5rem;
+    padding: .3rem 1rem;
+    border-radius: 100vmax;
+    border: 1px solid gray;
+}
+
+.add-projects form input {
+    outline: none;
+}
+
+.add-projects form img {
+    max-width: 100px;
+    margin: .5rem auto;
+    max-height: 100px;
+    object-fit: cover;
+}
+
+.add-projects form input[type="file"] {
+    display: none;
+}
+
+#thumb {
+    color: var(--text-color);
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.add-projects form input[type="submit"] {
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    padding: .5rem 0rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .Dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .add-projects {
+        order: 1;
+    }
+
+    .RightContent {
+        margin: 5rem auto 1rem auto !important;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: center;
+        border: none !important;
+    }
+
+    .RightContent button {
+        margin: .5rem !important;
+    }
+
+    .add-projects h1 {
+        margin: 0;
+    }
+}

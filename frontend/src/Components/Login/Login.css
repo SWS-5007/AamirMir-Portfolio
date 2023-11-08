@@ -1,0 +1,116 @@
+.Login h1 {
+    color: var(--text-color);
+    margin-top: 6rem;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+.Login {
+    background: url("../../assets/images/login.jpg") no-repeat center bottom/cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.Login .login-content {
+    width: clamp(200px, 50%, 400px);
+    margin: auto;
+    height: 80%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Login form>span {
+    text-align: right;
+    color: var(--text-color);
+    margin: 0rem 0rem .5rem 0rem;
+    cursor: pointer;
+    display: inline !important;
+}
+
+.Login input {
+    margin-block: 1rem;
+    font-size: 1rem;
+    padding: .7rem 1rem;
+    border: none;
+    color: black;
+    background: transparent;
+    outline: none;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.Login input::placeholder {
+    color: black;
+}
+
+.Login input[type="submit"] {
+    border: none;
+    min-width: 190px;
+    margin: auto;
+    border-radius: 30px;
+    background-color: var(--text-color);
+    color: white;
+    cursor: pointer;
+}
+
+.forget-dialog form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.forget-dialog h2 {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.forget-dialog input[type="submit"] {
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: .4rem 0rem;
+    cursor: pointer;
+}
+
+.forget-dialog input[type="email"] {
+    font-size: 1rem;
+    padding: .3rem 1rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+.forget-dialog input[type="email"],
+.forget-dialog input[type="submit"] {
+    margin: .5rem 0rem;
+}
+
+.forget-dialog form {
+    margin: 2rem 3rem;
+}
+
+@media screen and (max-width: 400px) {
+    .forget-dialog form {
+        margin: .5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Login .login-content {
+        width: 90%;
+    }
+}

@@ -1,0 +1,23 @@
+const express = require("express")
+const router = express.Router()
+const { createUser, accountVerification, login, checking, logout, createProject, deleteProject, addSkill, deleteSkill, createOrUpdateAbout, createContact, forgetPassword, resetPassword, updatePersonalDetails, updateEmailRequest, getUserDetails, updatePassword, getUserData } = require("../controllers/userController")
+const authentication = require("../middlewares/authentication")
+
+router.route("/signup").post(createUser)
+router.route("/verify/email/:token").put(accountVerification)
+router.route("/login").post(login)
+router.route("/logout").post(logout)
+router.route("/project/create").post(authentication, createProject)
+router.route("/data").get(getUserData)
+router.route("/project/delete/:id").put(authentication, deleteProject)
+router.route("/skill/add").post(authentication, addSkill)
+router.route("/skill/delete/:id").put(authentication, deleteSkill)
+router.route("/me").get(authentication, getUserDetails)
+router.route("/contact").post(createContact)
+router.route("/forget").post(forgetPassword)
+router.route("/reset/:token").put(resetPassword)
+router.route("/profile/update/").post(authentication, updatePersonalDetails)
+router.route("/update/:token").put(authentication, updateEmailRequest)
+router.route("/password/update").put(authentication, updatePassword)
+
+module.exports = router
